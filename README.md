@@ -51,7 +51,8 @@ endmodule
 
 OUTPUT:
 
-<img width="962" alt="2024-03-15 (3)" src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/d01f1c5a-f92a-4d6b-8750-98db0277edb7">
+<img width="962" alt="2024-03-15 (1)" src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/b2b8d0e6-e023-4aba-9ae8-3c49d1978bd0">
+
 
 
 
