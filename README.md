@@ -52,7 +52,8 @@ endmodule
 OUTPUT:
 
 <img width="962" alt="2024-03-15 (3)" src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/d01f1c5a-f92a-4d6b-8750-98db0277edb7">
-![half_adder -  C__Users_S SANJAY_half_adder_half_adder xpr  - Vivado 2023 1 05-04-2024 18_17_39](https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/88e96e64-96aa-4715-9dee-f16bdd1f0ed6)
+
+
 
 
 
