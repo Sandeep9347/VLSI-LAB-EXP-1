@@ -25,76 +25,39 @@
 
 Logic Diagram :
 
+VERILOG CODE:
+module logicgates(a,b,andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate);
+input a,b;
+output andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate;
+and(andgate,a,b);
+or(orgate,a,b);
+xor(xorgate,a,b);
+nand(nandgate,a,b);  
+nor(norgate,a,b);
+xnor(xnorgate,a,b);
+not(notgate,a);
+endmodule
 Logic Gates:
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/ee17970c-3ac9-4603-881b-88e2825f41a4)
 
 
 Half Adder:
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/0e1ecb96-0c25-4556-832b-aeeedfdfe7b9)
-
-
-Full adder:
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/9bb3964c-438f-469d-a3de-c1cca6f323fb)
-
-
-Half Subtractor:
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/731470b7-eb4e-49f8-8bb7-2994052a7184)
-
-
-
-Full Subtractor:
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/d66f874b-c1f2-44b3-a035-7149b56430c1)
-
-
-
-8 Bit Ripple Carry Adder
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/7385a408-40a5-4203-8050-b72818622d79)
-
-
-# HALF ADDER
-VERILOG CODE
-~~~
+VERILOG CODE:
 module half_adder(Sum,carry,a,b);
 input a,b;
 output Sum,carry;
 assign Sum = a ^ b;
 assign carry = a & b;
 endmodule
-~~~
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/0e1ecb96-0c25-4556-832b-aeeedfdfe7b9)
+out put:
+
+![image](https://github.com/21004601/VLSI-LAB-EXP-1/assets/160619092/9fbb8208-eadf-4dd1-aef5-8f846255c836)
 
 
-OUTPUT:
-
-<img width="745" alt="2024-03-15 (3)" src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/6c4f319b-6117-4f80-ab75-0828a105d2a5">
-<img width="962" alt="2024-04-06" src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/312df9ed-ef21-424f-a4d7-8d81a4c64eae">
-
-# HALF SUBTRACTOR
-
+Full adder:
 VERILOG CODE:
-~~~
-module half_sub(Diff,Borrow,a,b);
-input a,b;
-output Diff,Borrow;
-wire w1;
-not(w1,a);
-xor(Diff,a,b);
-and(Borrow,b,w1);
-endmodule
-~~~
-
-OUTPUT:
-
-<img width="826" alt="2024-04-07" src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/fff6face-f63a-4172-b5a9-6a95022deab8">
-<img width="962" alt="2024-03-04 (3)" src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/50e5c3d6-8f3c-4712-8fe2-fa0114dae014">
-
-# FULL ADDER
-VERILOG CODE:
-~~~
 module fulladder(sum,cout,a,b,c);
 input a,b,c;
 output sum,cout;
@@ -107,16 +70,31 @@ and a3(w4,a,c);
 or o1(w5,c1,c2);
 or o2(cout,w5,c3);
 endmodule
-~~~
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/9bb3964c-438f-469d-a3de-c1cca6f323fb)
+out put:
 
-OUTPUT:
+![image](https://github.com/21004601/VLSI-LAB-EXP-1/assets/160619092/d0b0e475-4157-409c-977e-0bfad51cb02e)
 
-<img width="962" alt="2024-03-15 (4)" src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/0f99f497-5145-41cb-971d-0b96a339897b">
-<img width="962" alt="2024-04-06 (1)" src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/19d4ec03-ae75-493d-b998-798c356a1069">
 
-# FULL SUBTRACTOR
+Half Subtractor:
 VERILOG CODE:
-~~~
+module half_sub(Diff,Borrow,a,b);
+input a,b;
+output Diff,Borrow;
+wire w1;
+not(w1,a);
+xor(Diff,a,b);
+and(Borrow,b,w1);
+endmodule
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/731470b7-eb4e-49f8-8bb7-2994052a7184)
+
+out put:
+
+![image](https://github.com/21004601/VLSI-LAB-EXP-1/assets/160619092/b1f1ae07-33ad-4cbb-af92-8ecc7611f1f9)
+
+
+Full Subtractor:
+VERILOG CODE:
 module full_sub(borrow,diff,a,b,c);
 output borrow,diff;
 input a,b,c;
@@ -128,37 +106,15 @@ and a2(w5,w1,c);
 and a3(w6,b,c);
 or o1(borrow,w4,w5,w6);
 endmodule
-~~~
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/d66f874b-c1f2-44b3-a035-7149b56430c1)
 
-OUTPUT:
 
-<img width="692" alt="2024-04-02 " src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/cb986e1c-8a11-4bc0-906d-d4a5fd6a3682">
-<img width="962" alt="2024-04-06 (3)" src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/e6dc405d-a723-483f-88f3-1132dd037dae">
+out put:
 
-# LOGIC GATES
+![image](https://github.com/21004601/VLSI-LAB-EXP-1/assets/160619092/d5986f3d-edd5-47d8-9a17-5aa18f0bbc7f)
+
+4-bit ripple carry adder:
 VERILOG CODE:
-~~~
-module logicgates(a,b,andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate);
-input a,b;
-output andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate;
-and(andgate,a,b);
-or(orgate,a,b);
-xor(xorgate,a,b);
-nand(nandgate,a,b);  
-nor(norgate,a,b);
-xnor(xnorgate,a,b);
-not(notgate,a);
-endmodule
-~~~
-
-OUTPUT:
-
-<img width="822" alt="2024-03-15 (5)" src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/7b1685d4-2018-43e2-aac4-96684266e0c6">
-<img width="962" alt="2024-04-06 (4)" src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/32d0f8af-5dea-47fd-ab65-e64aaa0d03ee">
-
-# 4-BIT RIPPLE CARRY ADDER
-VERILOG CODE:
-~~~
 module rippe_adder(S, Cout, X, Y,Cin);
 input [3:0] X, Y;
 input Cin;
@@ -181,15 +137,14 @@ and G3(w2, w1, Ci);
 and G4(w3, X, Y);
 or G5(Co, w2, w3);
 endmodule
-~~~
-OUTPUT:
 
-<img width="962" alt="2024-03-15" src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/deb0ca19-1fc3-4a6c-9168-1c59e4105e6d">
-<img width="962" alt="2024-04-06 (5)" src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/270b38f9-6725-4118-8ef8-98ca78e7be87">
+out put:
 
-# 8-BIT RIPPLE CARRY ADDER
+![image](https://github.com/21004601/VLSI-LAB-EXP-1/assets/160619092/5ec25163-9246-406e-8e7d-1a62bc7ad766)
+
+
+8 Bit Ripple Carry Adder
 VERILOG CODE:
-~~~
 module rippe_adder(S, Cout, X, Y,Cin);
 input [7:0] X, Y;// Two 4-bit inputs
 input Cin;
@@ -217,12 +172,23 @@ and G3(w2, w1, Ci);
 and G4(w3, X, Y);
 or G5(Co, w2, w3);
 endmodule
-~~~
 
-OUTPUT:
+module fulladder(S, Co, X, Y, Ci);
+input X, Y, Ci;
+output S, Co;
+wire w1,w2,w3;
+xor G1(w1, X, Y);
+xor G2(S, w1, Ci);
+and G3(w2, w1, Ci);
+and G4(w3, X, Y);
+or G5(Co, w2, w3);
+endmodule
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/7385a408-40a5-4203-8050-b72818622d79)
+out put :
 
-<img width="591" alt="2024-04-06 (7)" src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/d6d5b77b-173d-4a11-a943-2bd046d33aa8">
-<img width="962" alt="2024-04-06 (6)" src="https://github.com/21004601/VLSI-LAB-EXP-1/assets/146088220/43b8e889-ac6a-4f12-ae23-4309ee538b8c">
+
+![image](https://github.com/21004601/VLSI-LAB-EXP-1/assets/160619092/04aa0fa7-d7c9-4d65-b6a8-fccc029a5063)
+
 
 RESULT:
 THUS THE LOGIC GATES,ADDERS,SUBTRACTORS VERILOG CODE IS SIMULATED AND OUTPUT VERIFIED SUCCESSFULLY
