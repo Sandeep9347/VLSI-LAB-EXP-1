@@ -14,6 +14,7 @@ STEP:1 Start the Xilinx navigator, Select and Name the New project. STEP:2 Selec
 Logic Diagram :
 
 Logic Gates:
+
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/ee17970c-3ac9-4603-881b-88e2825f41a4)
 
 VERILOG CODE:
@@ -31,6 +32,7 @@ not(notgate,a);
 endmodule
 ```
 OUTPUT:
+
  ![image](https://github.com/Sandeep9347/VLSI-LAB-EXP-1/assets/160619092/b80cc1bf-406a-4ccb-b9b7-3f4132080a0b)
  
 LOGIC DIAGRAM:
@@ -48,6 +50,7 @@ assign carry = a & b;
 endmodule
 ```
 OUTPUT:
+
 ![image](https://github.com/Sandeep9347/VLSI-LAB-EXP-1/assets/160619092/798ac1d4-e353-43e8-81bb-ac7d51a3103e)
 
 LOGIC DIAGRAM:
@@ -71,6 +74,7 @@ or o2(cout,w5,c3);
 endmodule
 ```
 OUTPUT:
+
 ![image](https://github.com/Sandeep9347/VLSI-LAB-EXP-1/assets/160619092/cfcd7a2e-ad44-471f-a165-82e77e807d4a)
 
 LOGIC DIAGRAM:
@@ -90,6 +94,7 @@ and(Borrow,b,w1);
 endmodule
 ```
 OUTPUT:
+
 ![image](https://github.com/Sandeep9347/VLSI-LAB-EXP-1/assets/160619092/27f0eeb9-2391-44cf-bb65-02c4d4f1828d)
 
 
@@ -151,6 +156,7 @@ module rippe_adder(S, Cout, X, Y,Cin);
 endmodule
 ```
 OUTPUT:
+
 ![image](https://github.com/Sandeep9347/VLSI-LAB-EXP-1/assets/160619092/3751c841-967e-4c20-937a-d2909244214b)
 
 
