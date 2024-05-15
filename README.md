@@ -7,11 +7,11 @@ To simulate and synthesis Logic Gates,Adders and Subtractor using Xilinx ISE.
 
 APPARATUS REQUIRED:
 
-Xilinx 14.7 Spartan6 FPGA
+vivado 14.7 Spartan6 FPGA
 
 PROCEDURE: 
 
-STEP:1 Start the Xilinx navigator, Select and Name the New project.
+STEP:1 Start the vivado navigator, Select and Name the New project.
 
 STEP:2 Select the device family, device, package and speed.
 
