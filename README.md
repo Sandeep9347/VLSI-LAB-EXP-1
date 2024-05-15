@@ -1,15 +1,15 @@
-# EXPERIMENT:1
+# EXPERIMENT:1 SIMULATION AND IMPLEMENTATION OF LOGIC GATES, ADDERS & SUBTRACTOR
 # DATE:
-# SIMULATION AND IMPLEMENTATION OF LOGIC GATES, ADDERS & SUBTRACTOR
-AIM:
+
+# AIM:
 
 To simulate and synthesis Logic Gates,Adders and Subtractor using Xilinx ISE.
 
-APPARATUS REQUIRED:
+# APPARATUS REQUIRED:
 
 vivado 14.7 Spartan6 FPGA
 
-PROCEDURE: 
+# PROCEDURE: 
 
 STEP:1 Start the vivado navigator, Select and Name the New project.
 
